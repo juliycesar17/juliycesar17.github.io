@@ -1,0 +1,14 @@
+<div id="name_comments">Comments #<span id="c_n">{{name}}</span></div>
+<div id="text_comments">
+
+<div class="comments_w" ng-repeat="c in comments_yet track by $index">
+    <div class="square"></div>
+  <div class="cm">{{c}}</div>
+</div>
+
+<div id="text_comments" ng-show="comments_yet">
+  <input  id="new_c" ng-model="comment_a" type="text" placeholder="add new comment..."/>
+  <input ng-click="addComment(comment_a)" id="add_c" type="button" value="Add comment">
+
+</div>
+</div>
