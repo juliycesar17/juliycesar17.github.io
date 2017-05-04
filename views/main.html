@@ -1,0 +1,26 @@
+
+<section id="main">
+ <div>Items</div>
+ <form id="main_form">
+  <fieldset >
+    <input  id="new" ng-model="qname" type="text" placeholder="Type name here..."/>
+    <input ng-click="addItem(qname)" id="add" type="button" value="Add new">
+    <input ng-click="show_all()" id="all" type="button" value="Show all">
+    </fieldset>
+</form>
+<div id="list">
+<div class="nth_item"  >
+
+<!--first item with custom name <span id="qty_com"></span>    | oneitem:item-->
+<div class="items" ng-repeat ="item in items | filter:  setfnitem">
+<div class="item_one" ng-click="setItem(item)">{{item.name}}</div>
+<div class="delete_item">
+  <input ng-click="delItem(item)" id="del" ng-model="delitem" type="submit" value="Delete"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<comments>
+
+</comments>
